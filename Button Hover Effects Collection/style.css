@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #0f2027;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* 1. Fill Effect */
+.btn-fill {
+    border: 2px solid #00c6ff;
+}
+
+.btn-fill::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00c6ff;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.btn-fill:hover::before {
+    width: 100%;
+}
+
+/* 2. Slide Effect */
+.btn-slide {
+    background: #ff512f;
+}
+
+.btn-slide:hover {
+    transform: translateY(-5px);
+}
+
+/* 3. Glow Effect */
+.btn-glow {
+    border: 2px solid #00ff99;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px #00ff99;
+}
+
+/* 4. Outline Effect */
+.btn-outline {
+    border: 2px solid #f7971e;
+}
+
+.btn-outline:hover {
+    background: #f7971e;
+    color: #000;
+}
+
+/* 5. Rotate Effect */
+.btn-rotate {
+    background: #8e2de2;
+}
+
+.btn-rotate:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
